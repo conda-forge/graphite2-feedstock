@@ -9,6 +9,8 @@ Package license: LGPL-2.0-or-later
 
 Summary: A "smart font" system that handles the complexities of lesser-known languages of the world.
 
+Development: https://github.com/silnrsi/graphite
+
 Current build status
 ====================
 
