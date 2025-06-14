@@ -27,6 +27,7 @@ requirements:
     - m2-patch  # [win]
     - cmake
     - ninja  # [win]
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make                   # [unix]
