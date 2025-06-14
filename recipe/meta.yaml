@@ -51,6 +51,7 @@ about:
   license: LGPL-2.0-or-later
   license_file: COPYING
   summary: 'A "smart font" system that handles the complexities of lesser-known languages of the world.'
+  dev_url: https://github.com/silnrsi/graphite
 
 extra:
   recipe-maintainers:
