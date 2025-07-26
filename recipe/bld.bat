@@ -4,6 +4,7 @@ mkdir build
 cd build
 
 cmake -G Ninja ^
+      -DCMAKE_POLICY_VERSION_MINIMUM=3.5 ^
       -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -DCMAKE_BUILD_TYPE=Release ^
       -DBUILD_SHARED_LIBS=ON ^
