@@ -7,7 +7,6 @@ cmake -G Ninja ^
       -DCMAKE_POLICY_VERSION_MINIMUM=3.10 ^
       -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -DBUILD_SHARED_LIBS=ON ^
-      -DGRAPHITE2_COMPARE_RENDERER=ON ^
       ..
 if errorlevel 1 exit 1
 
