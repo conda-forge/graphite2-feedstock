@@ -4,10 +4,9 @@ mkdir build
 cd build
 
 cmake -G Ninja ^
+      -DCMAKE_POLICY_VERSION_MINIMUM=3.10 ^
       -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
-      -DCMAKE_BUILD_TYPE=Release ^
       -DBUILD_SHARED_LIBS=ON ^
-      -DGRAPHITE2_COMPARE_RENDERER=ON ^
       ..
 if errorlevel 1 exit 1
 
