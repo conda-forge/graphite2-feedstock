@@ -3,7 +3,8 @@
 mkdir build
 cd build
 
-cmake -G Ninja ^
+cmake %CMAKE_ARGS% ^
+      -G Ninja ^
       -DCMAKE_POLICY_VERSION_MINIMUM=3.10 ^
       -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -DBUILD_SHARED_LIBS=ON ^
