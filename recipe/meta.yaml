@@ -23,8 +23,6 @@ build:
 
 requirements:
   build:
-    - m2-make  # [win]
-    - m2-patch  # [win]
     - cmake
     - ninja  # [win]
     - {{ stdlib('c') }}
