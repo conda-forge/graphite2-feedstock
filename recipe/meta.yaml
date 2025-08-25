@@ -42,8 +42,6 @@ test:
     - if not exist %LIBRARY_INC%\\graphite2\\Font.h exit 1  # [win]
     - if not exist %LIBRARY_LIB%\\graphite2.lib exit 1  # [win]
     - if not exist %LIBRARY_BIN%\\graphite2.dll exit 1  # [win]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://graphite.sil.org/
