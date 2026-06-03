@@ -25,6 +25,7 @@ requirements:
   build:
     - cmake
     - ninja  # [win]
+    - python
     - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
