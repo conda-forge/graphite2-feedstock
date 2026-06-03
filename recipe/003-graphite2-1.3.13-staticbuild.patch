@@ -1,8 +1,8 @@
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 389cf5a..66fa578 100644
+index 4194e25..ae628e5 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -101,6 +101,47 @@ set_target_properties(graphite2 PROPERTIES  PUBLIC_HEADER "${GRAPHITE_HEADERS}"
+@@ -83,6 +83,47 @@ set_target_properties(graphite2 PROPERTIES  PUBLIC_HEADER "${GRAPHITE_HEADERS}"
                                              LT_VERSION_CURRENT ${GRAPHITE_API_CURRENT}
                                              LT_VERSION_REVISION ${GRAPHITE_API_REVISION}
                                              LT_VERSION_AGE ${GRAPHITE_API_AGE})
@@ -50,7 +50,7 @@ index 389cf5a..66fa578 100644
  
  if  (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
      set_target_properties(graphite2 PROPERTIES
-@@ -149,8 +190,10 @@ endif()
+@@ -140,8 +181,10 @@ endif()
  if  (${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
      set_target_properties(graphite2 PROPERTIES
          COMPILE_DEFINITIONS "_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;UNICODE;GRAPHITE2_EXPORTING")
