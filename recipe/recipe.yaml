@@ -45,25 +45,18 @@ requirements:
     - ${{ pin_subpackage('graphite2') }}
 
 tests:
-  - script:
-      - if: unix
-        then: test -f $PREFIX/lib/pkgconfig/graphite2.pc
-      - if: unix
-        then: test -f $PREFIX/share/graphite2/graphite2.cmake
-      - if: unix
-        then: test -f $PREFIX/include/graphite2/Font.h
-      - if: unix
-        then: test -f $PREFIX/lib/libgraphite2${SHLIB_EXT}
-      - if: win
-        then: if not exist %PREFIX%\\Library\\lib\\pkgconfig\\graphite2.pc exit 1
-      - if: win
-        then: if not exist %PREFIX%\\Library\\share\\graphite2\\graphite2.cmake exit 1
-      - if: win
-        then: if not exist %LIBRARY_INC%\\graphite2\\Font.h exit 1
-      - if: win
-        then: if not exist %LIBRARY_LIB%\\graphite2.lib exit 1
-      - if: win
-        then: if not exist %LIBRARY_BIN%\\graphite2.dll exit 1
+  - package_contents:
+      include:
+        - graphite2/Font.h
+      lib:
+        - graphite2
+      files:
+        - if: win
+          then: Library/lib/pkgconfig/graphite2.pc
+          else: lib/pkgconfig/graphite2.pc
+        - if: win
+          then: Library/share/graphite2/graphite2.cmake
+          else: share/graphite2/graphite2.cmake
 
 about:
   license: LGPL-2.0-or-later
